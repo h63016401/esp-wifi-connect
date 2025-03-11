@@ -45,7 +45,7 @@
         </svg>
         
         <div class="message">
-            <p>设备将在 <span id="countdown">3</span> 秒后重启</p>
+            <p>目前裝置將 <span id="countdown">3</span> 秒後重新啟動</p>
             <p>Device will restart in <span id="countdown-en">3</span> seconds</p>
         </div>
     </div>
@@ -68,10 +68,10 @@
                     })
                     .then(response => {
                         if (response.ok) {
-                            console.log('重启指令已发送');
+                            console.log('重新開機指令已經發送');
                             window.close();
                         } else {
-                            console.error('发送重启指令失败');
+                            console.error('發送新開機指令失敗');
                         }
                     })
                     .catch(error => {
