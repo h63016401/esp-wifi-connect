@@ -123,12 +123,12 @@
         // Add language translations
         const translations = {
             'zh-CN': {
-                title: 'WiFi 配置',
+                title: 'WiFi 設定',
                 saved_wifi: '已保存的 WiFi',
                 new_wifi: '新的 WiFi',
-                password: '密码:',
-                connect: '连接',
-                select_wifi: '从下面列表选择 2.4G WiFi:'
+                password: '密碼:',
+                connect: '連線',
+                select_wifi: '從下面列表選擇 2.4G WiFi:'
             },
             'en-US': {
                 title: 'WiFi Configuration',
@@ -144,7 +144,7 @@
             const lang = document.getElementById('language').value;
             // 检查语言值是否合法
             if (!translations[lang]) {
-                console.warn(`不支持的语言: ${lang}，默认使用中文`);
+                console.warn(`不支援的語言: ${lang}，預設使用中文`);
                 document.getElementById('language').value = 'zh-CN';
                 return changeLanguage();
             }
@@ -303,7 +303,7 @@
 
                 const data = await response.json();
                 if (!data.success) {
-                    throw new Error(data.error || '连接失败');
+                    throw new Error(data.error || '連線失敗');
                 }
 
                 // 连接成功，跳转到完成页面
