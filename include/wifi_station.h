@@ -7,8 +7,8 @@
 
 #include <esp_event.h>
 #include <esp_timer.h>
-#include <esp_wifi_types_generic.h>
-
+//#include <esp_wifi_types_generic.h> //在idf5.3不相容
+#include <esp_wifi_types.h>
 struct WifiApRecord {
     std::string ssid;
     std::string password;
